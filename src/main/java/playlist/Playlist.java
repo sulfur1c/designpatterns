@@ -12,7 +12,7 @@ public class Playlist implements IComponent{
     }
     @Override
     public void play() {
-
+        this.playlist.stream().forEach(song -> song.play());
     }
 
     @Override
@@ -25,16 +25,12 @@ public class Playlist implements IComponent{
         return this.playlistName;
     }
 
-    public void add(Song song) {
-        this.playlist.add(song);
+    public void add(IComponent component) {
+        this.playlist.add(component);
     }
 
-    public void add(Playlist playList) {
-        playList.playlist.stream().forEach(song -> this.playlist.add(song));
-    }
-
-    public void remove(Playlist playList) {
-        this.playlist.remove(playList);
+    public void remove(IComponent component) {
+        this.playlist.remove(component);
     }
 
 }

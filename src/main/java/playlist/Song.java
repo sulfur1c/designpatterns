@@ -13,7 +13,7 @@ public class Song implements IComponent {
 
     @Override
     public void play() {
-
+        System.out.println("Playing: " + this.artist + " - " + this.songName);
     }
 
     @Override
