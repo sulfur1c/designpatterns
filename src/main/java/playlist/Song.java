@@ -10,5 +10,23 @@ public class Song implements IComponent {
         this.songName = songName;
         this.artist = artist;
     }
-// Your code goes here!
+
+    @Override
+    public void play() {
+
+    }
+
+    @Override
+    public void setPlaybackSpeed(float speed) {
+        this.speed = speed;
+    }
+
+    @Override
+    public String getName() {
+        return this.songName;
+    }
+
+    public String getArtist() {
+        return this.artist;
+    }
 }
