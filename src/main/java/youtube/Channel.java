@@ -9,6 +9,11 @@ public class Channel implements Subject {
     private String channelName;
     private String status;
 
+
+    public Channel(String channelName) {
+        this.channelName = channelName;
+    }
+
     @Override
     public void registerObserver(Observer observer) {
         this.observers.add(observer);
